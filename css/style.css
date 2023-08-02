@@ -3,6 +3,11 @@
 @import "footer.css";
 @import "main.css";
 
+:foot {
+  --button-primary: rgb(254, 111, 15);
+  --button-hover: rgba(254, 111, 15, 0.8);
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
     "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI",
@@ -11,7 +16,7 @@ body {
 }
 
 .media-info-msg {
-  position: absolute;
+  position: fixed; /* absoulte 사용시 화면 아래쪽 보임 */
   top: 0;
   left: 0;
   width: 100vw;
@@ -20,11 +25,10 @@ body {
   justify-content: center;
   align-items: center;
   background-color: salmon;
-  opacity: 1;
 }
 
 @media screen and (max-width: 600px) {
   .media-info-msg {
-    opacity: 0;
+    display: none;
   }
 }
